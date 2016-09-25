@@ -1,0 +1,8 @@
+<div>
+    <ul>
+        <li *ngFor="let toDo of toDos" [ngStyle]="{'color': toDo.completed? '#999999':'#000000'}">
+            <span *ngIf="!toDo.completed">&#9744;</span>
+            <span *ngIf="toDo.completed">&#9745;</span> {{toDo.title}}
+        </li>
+    </ul>
+</div>

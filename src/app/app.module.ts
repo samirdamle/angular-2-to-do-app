@@ -5,16 +5,33 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
+import { ToDoComponent } from './to-do/to-do.component';
+import { ToDoListComponent } from './to-do-list/to-do-list.component';
+
+class Greeter{
+  greet (name: string) {
+    return 'Hello ' + name;
+  }
+}
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ToDoComponent,
+    ToDoListComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [Greeter],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  greeter: Greeter;
+
+  constructor(greeter: Greeter){
+    this.greeter = greeter;
+  }
+ }
