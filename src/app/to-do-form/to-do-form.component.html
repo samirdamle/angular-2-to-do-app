@@ -1,0 +1,10 @@
+<div>
+    <form (ngSubmit)="onSubmit(newToDoFormRef.value)" #newToDoFormRef="ngForm">
+        <input type="text" name="newToDo" required placeholder="Add a to-do" value="" #newToDoRef="ngModel" [(ngModel)]="newToDo">
+        <button type="submit">Add</button>
+        <span *ngIf="checkForErrors(newToDoRef)">This field is required.</span>
+        <div>
+            {{newToDo}}
+        </div>
+    </form>
+</div>

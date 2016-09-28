@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ToDo } from "../shared/to-do/to-do";
 import { ToDoComponent } from "../to-do/to-do.component";
+import { ToDoFormComponent } from "../to-do-form/to-do-form.component";
 import { ToDoService } from "../shared/to-do/to-do.service";
 
 @Component({

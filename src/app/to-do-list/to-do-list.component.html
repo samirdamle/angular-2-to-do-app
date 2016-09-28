@@ -1,4 +1,6 @@
 <div>
+    <to-do-form></to-do-form>
+    <br>
     <ul>
         <li *ngFor="let toDo of toDos" [ngStyle]="{'color': toDo.completed? '#999999':'#000000'}">
             <span *ngIf="!toDo.completed">&#9744;</span>

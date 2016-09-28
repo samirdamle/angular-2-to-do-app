@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 
 import { ToDoComponent } from './to-do/to-do.component';
 import { ToDoListComponent } from './to-do-list/to-do-list.component';
+import { ToDoFormComponent } from './to-do-form/to-do-form.component';
 
 class Greeter{
   greet (name: string) {
@@ -18,7 +19,8 @@ class Greeter{
   declarations: [
     AppComponent,
     ToDoComponent,
-    ToDoListComponent
+    ToDoListComponent,
+    ToDoFormComponent
   ],
   imports: [
     BrowserModule,
